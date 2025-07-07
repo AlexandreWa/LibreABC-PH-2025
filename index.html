@@ -1,22 +1,20 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="fr">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
   		<meta name="description" content="Intervention LibreABC : présentation de Programming Historian, septembre 2025">
   		<meta name="abstract" content="Depuis 2019, Programming Historian en français occupe une place singulière dans le paysage de l’édition scientifique francophone. Fondée sur les valeurs de la science ouverte et de l’open source, la publication fait partie de la famille de revues diamant multilingues Programming Historian (anglais, espagnol, portugais). Elle apporte une légitimité académique aux « leçons » d’humanités numériques grâce à un parti pris fort : un processus d’évaluation par les pairs rigoureux et entièrement ouvert, affiché sur la plateforme GitHub. Très majoritairement consacrées à des solutions libres et toujours basées sur des jeux de données librement accessibles, les leçons de la revue sont des ressources précieuses pour la recherche et l’enseignement. En nous fondant sur des exemples concrets issus de diverses disciplines et adaptés à différents niveaux, nous montrerons comment les leçons de Programming Historian peuvent être utilisées dans le cadre de la formation aux techniques et outils computationnels. Nous aborderons également la fabrication de la revue : son histoire, sa ligne éditoriale, sa communauté, son engagement pour le multilinguisme et la diversité, et son processus d’évaluation ouvert. Enfin, nous expliquerons comment les formateur·ices et enseignant·es en sciences humaines et sociales peuvent contribuer au projet collaboratif de Programming Historian, promouvant ainsi le libre accès et la science ouverte.">
-  		<meta name="author" content="Alexandre Wauthier">
+  		<meta name="author" content="Alexandre Wauthier, Marie Flesch">
   		<meta name="apple-mobile-web-app-capable" content="yes">
   		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<title>LibreABC - Programming Historian, septembre 2025</title>
+		<title>Programming Historian en français : les valeurs de la science ouverte au service de la formation en humanités numériques</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
 
-		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 
 		<style>
@@ -34,74 +32,51 @@
 }
 
 .reveal .slide-number{
-background-color: rgba(0, 0, 145, 0.75);
+background-color: #3d7c81;
+left: 20px !important;
+right: auto !important;
+text-align: left;
 }
 
 :root {
-	--r-link-color: rgba(0, 0, 145, 0.75);
+	--r-link-color: #3d7c81;
 }
 
-</style>
-
+		</style>
 	</head>
-
 	<body>
-
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section data-markdown>
-					<textarea data-template>
-						# Une superbe présentation
-						Essai avec un [lien hypertexte vers le dépôt](https://github.com/AlexandreWa/LibreABC-PH-2025).
-						---
-						## Slide 2
-
-						---
-						## Slide 3
-
-						---
-						## Slide 4
-						### Télécharger le support en PDF : [suivre ce lien](https://alexandrewa.github.io/LibreABC-PH-2025?print-pdf) et *imprimer la page en PDF*
-					</textarea>
-				</section>
-
 				<section>
 					<div style="float:left">
-						<img src="images/mesr.svg" alt="mesr logo" style="height: 180px; margin: -5em auto 0rem 1em; background: transparent;" class="mesr-logo">
+						<img src="https://programminghistorian.org/images/logos/ph-fr-logo.svg" alt="Programming Historian en français logo" style="height: 150px; margin: -5em auto 0rem 1em; background: transparent;" class="ph-logo">
 					</div>
 					<div style="float:left;display:block;margin:auto">
-						<div style='font-size:1.2em'>Ouverture des codes sources au sein du Département des outils d'aide à la décision</div>
+						<div style='font-size:1.2em'>Programming Historian en français : les valeurs de la science ouverte au service de la formation en humanités numériques</div>
 					</div>
 					<div style="float:left;margin-top:2rem">
-						<p style='font-size:0.6em;margin-top:0;margin-bottom:0.5rem;'>28 septembre 2022</p>
+						<p style='font-size:0.5em;margin-top:0;margin-bottom:0.5rem;'>Journée des logiciels libres en Archives, Bibliothèques et Centres de documentation (<a href ="https://libreabc.ch/">LibreABC</a>)</p>
+						<p style='font-size:0.5em;margin-top:0;margin-bottom:0.5rem;'>9 septembre 2025 - Musée d'ethnographie de Genève</p>
 					</div>
 					<div style="float:right;margin-top:2rem">
-						<p style='font-size:0.6em;margin-top:0;margin-bottom:0.5rem;'>A. L'Hôte, E. Jeangirard</p>
-						<p style='font-size:0.6em;margin-top:0;margin-bottom:0.2rem;'>Département des outils d'aide</p>
-						<p style='font-size:0.6em;margin-top:0;margin-bottom:0.5rem;'>à la décision - SIES - MESR</p>
-						</pre>
+						<p style='font-size:0.6em;margin-top:0;margin-bottom:0.5rem;'>Alexandre Wauthier et Marie Flesch</p>
 					</div>
 				</section>
-				
-				<section>
-					<h2>Notre situation</h2>
-					<ul>
-						<li>Nombreux projets <span style='font-weight:900'>interconnectés</span></li>
-						<li>Plusieurs contributeurs travaillant <span style='font-weight:900'>simultanément</span>
-							<ul>
-						   	  <li>sur différentes parties du code source</li>
-							  <li>depuis des lieux différents (Mirabeau, Descartes, télétravail, prestataires)</li>
-							</ul>
-							<li>De plus en plus de <span style='font-weight:900'>collaborations hors du MESR</span> (établissements, ANR notamment)</li>
-					</ul>
+				<section data-markdown>
+					<textarea data-template>
+						# Présentation
+						- **Alexandre Wauthier**, ingénieur d'études chargé d'accompagnement de projets numériques, Humathèque, Campus Condorcet (Paris-Aubervilliers), rédacteur au _Programming Historian en français_,
+						- **Marie Flesch**, chercheuse postdoctorale à l’Université Paris Cité et rédactrice en cheffe de _Programming Historian en français_
+						---
+						## Slide 2
+						Sous texte
+
+					</textarea>
 				</section>
-				
 				<section>
 					<h2>Ce que l'on a mis en place</h2>
 					<div style="float:left;width:50%;margin-left:-150px">
-						<img src="images/dataesr_github.png" alt="dataesr github" style="width:120%" >
+						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/250px-Octicons-mark-github.svg.png" alt="dataesr github" style="width:120%" >
 					</div>
 					<div style="float:right;display:block;width:60%;padding-left:-250px;font-size:0.8em;">
 						<ul>
@@ -135,71 +110,25 @@ background-color: rgba(0, 0, 145, 0.75);
 					</ul>
 				</section>
 
-				<!--section>
-					<h2>Workflow de travail</h2>
-					<ul>
-						<li>Relecture et validation du travail par un collègue via des PR</li>
-						<li>Implication des prestataires</li>
-						<li>1 branche par environnement de travail (dev, staging, prod)</li>
-						<li>Utilisation des workflows (CI/CD)</li>
-					</ul>
-				</section-->
-				<section>
-					<h3>L'ouverture du code source n'est pas un processus binaire</h3>
-					mais révèle un continuum de possibilités :
-					<ol start=0 style='font-size:0.8em'>
-						<li class="fragment"><p>Fichiers sur un ordinateur personnel (pas d'ouverture)</p></li>
-						<li class="fragment fade-in"><p>Fichiers partagés sur NAS</p></li>
-						<li class="fragment fade-in"><p>Utilisation d'un outil de versionning (idéalement git)</p></li>
-						<li class="fragment fade-in"><p>Plusieurs contributeurs internes sur un repo privé</p></li>
-						<li class="fragment fade-in"><p>Repo publics avec uniquement des contributeurs internes</p></li>
-						<li class="fragment fade-in"><p>Plusieurs contributeurs internes et externes</p></li>
-					</ol>
+				<section data-markdown>
+					<textarea data-template>
+						# Template de présentation en markdown
+						voilà
+						---
+						## Slide 2
+						Sous texte
+						---
+						## Slide 3
+						Un texte
+					</textarea>
 				</section>
-				
-				<section>
-					<h3>L'ouverture du code source n'est pas suffisante</h3>
-					dans une démarche de transparence et d'incitation à la ré-utilisation, mais doit s'accompagner d'efforts supplémentaires:
-					<ul style='font-size:0.8em'>
-						<li><p>Ouverture des données</p></li>
-						<li><p>Conteneurisation du code pour facilité la reproductibilité</p></li>
-						<li><p>Mise à disposition de services (API, interfaces de démo)</p></li>
-						<li><p>Communication didactique et adaptée autour des méthodes et algorithmes utilisés</p></li>
-				</section>
-
-				<section>
-					<h3>Retour d'expérience sur nos repos 'internes'</h3>
-					<ul style='font-size:0.8em'>
-						<li>Plus facile de commencer directement avec un repo public : enjeu de sécurité et de modularité dès le début</li>
-						<li>Le code n'est pas et ne sera jamais parfait, la documentation non plus</li>
-						<li>Les outils techniques ne se substituent pas aux échanges humain, surtout à l'oral</li>
-						<li>Maîtrise inégale des outils parmi les agents, mais montée en compétence en fonction des besoins et usages respectifs</li>
-					</ul>
-				</section>
-				
-				<section>
-					<h3>Retour d'expérience sur notre repo 'externe'</h3>
-					<ul style='font-size:0.8em'>
-						<li>Au delà de la transparence et du partage, la création de valeur commune est coûteuse, et il faut se fixer des règles de fonctionnement</li>
-						<li>Attentes parfois différentes entre la communauté et nos besoins propres</li>
-						<li>Maintenance, correction de bug</li>
-						<li>Animation de la communauté</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Nos points d'amélioration</h2>
-					<ul style='font-size:0.8em'>
-						<li>Certains repos ne sont pas ouverts</li>
-						<li>D'autres contiennent du code mort : un seul commit sans plus de mise à jour</li>
-						<li>La documentation peut être améliorée : autour du code et à l'intérieur</li>
-					</ul>
-				</section>
-
-				<section data-background="images/7pHTiZYbAoq40.gif">
-					<div style='color: black;background: rgba(250, 250, 250, 0.4);'>
-					  <div>Code source de la présentation ouvert sur <a href="https://github.com/dataesr/presentations">https://github.com/dataesr/presentations</a></div>
-					  <div>qui est un fork de la library open source <a href="https://github.com/hakimel/reveal.js/">reveal.js</a></div>
+				<section data-background="https://media1.tenor.com/m/J5A9wZzn3ZYAAAAd/robert-redford-jeremiah-johnson.gif">
+					<div style='color: black;background: rgba(255, 0, 0, 0.4);'>
+					  <div>
+											<ul>
+												<li>Pour télécharger le support en PDF : <a href="https://alexandrewa.github.io/LibreABC-PH-2025?print-pdf">alexandrewa.github.io/LibreABC-PH-2025?print-pdf</a> et <strong>imprimer la page en PDF</strong></li>
+												<li>Lien vers le dépôt GitHub <a href="https://github.com/AlexandreWa/LibreABC-PH-2025">LibreABC-PH-2025</a></li>
+											</ul>
 					</div>
 				</section>
 
