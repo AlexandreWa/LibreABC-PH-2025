@@ -1,8 +1,8 @@
 # 🚧 Présentation en cours d'élaboration 🚧
 ## *Programming Historian en français* : les valeurs de la science ouverte au service de la formation en humanités numériques
 
-📅 Journée des logiciels libres en Archives, Bibliothèques et Centres de documentation ([LibreABC](https://libreabc.ch/))
-🕐 9 septembre 2025
+📅 Journée des logiciels libres en Archives, Bibliothèques et Centres de documentation ([LibreABC](https://libreabc.ch/))<br>
+🕐 9 septembre 2025<br>
 📍 Musée d'ethnographie de Genève
 
 ## Points clés
