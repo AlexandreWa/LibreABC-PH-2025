@@ -43,10 +43,82 @@
 			}
 
 		    ul.custom-list {
-     		 font-size: 0.6em; 
-    	 	 line-height: 1.4em; 
+     		 font-size: 0.7em; 
+    	 	 line-height: 1em; 
 			}
-   		
+
+			.table-container {
+			max-height: 75vh;        /* augmente un peu la hauteur visible pour voir la dernière ligne */
+			max-width: 90vw;
+			margin: 0 auto;
+			overflow-y: auto;
+			overflow-x: auto;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			font-family: Calibri, sans-serif;
+			font-size: 0.75em;      
+			}
+
+			table {
+			width: 100%;
+			border-collapse: collapse;
+			table-layout: fixed;
+			}
+
+			th, td {
+			padding: 8px 10px;
+			border: 1px solid #ddd;
+			text-align: center;       
+			word-wrap: break-word;
+			vertical-align: middle;  
+			}
+
+			th:first-child,
+			td:first-child {
+			width: 150px;          
+			}
+
+			th {
+			background-color: #f7f7f7;
+			font-weight: bold;
+			}
+
+			.nom-etape {
+			display: inline-block;
+			padding: 4px 14px;
+			border-radius: 18px;
+			font-weight: 600;
+			color: #222;
+			min-width: 110px;
+			text-align: center;
+			margin: 2px 0;
+			}
+
+			.nom0 { background: #d9d9da; }
+			.nom1 { background: #285dbe; color: #fff; }
+			.nom2 { background: #27ac91; }
+			.nom3 { background: #bdb6d7; }
+			.nom4 { background: #c6a7a7; }
+			.nom5 { background: #e6eba3; }
+			.nom6 { background: #a0d8ce; }
+			.nom7 { background: #46c7ec; }
+
+			.ph-bg {
+			display: inline-block;
+			padding: 8px 30px;
+			border-radius: 18px;
+			font-weight: 600;
+			color: #dbdbdb;
+			min-width: 110px;
+			text-align: center;
+			margin: 0,5px 2;
+			}
+
+			.ph-bg-en { background: #444444; }
+			.ph-bg-es { background: #535d7f; }
+			.ph-bg-fr { background: #3d7c81; }
+			.ph-bg-pt { background: #886814; }
+
 
 		</style>
 	</head>
@@ -70,8 +142,6 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-
-						<!-- .slide: data-background="#FFFFFF" -->
 						<div>
 						<p style="float:left;display:block;margin:auto">
 							<div style='font-size:1.2em'>Présentation proposée par :
@@ -83,26 +153,30 @@
 						<p style='font-size:0.6em;margin-top:0;margin-bottom:0.5rem; text-align: center;'>Maîtresse de conférences à l’Université de Lorraine (Nancy)<br>Rédactrice en cheffe du <em>Programming Historian</em> en français</p>
 						</div>
 						---
-
-						<!-- .slide: data-background="#FFFFFF" -->
+						
 						<p style="float:left;display:block;margin:auto">
-							<div style='font-size:1.2em'>Plan :</div>
+							<div style='font-size:1.2em'><u>Plan</u> :</div>
 						</p>
 						
-						1. Programming Historian, qu'est-ce que c'est ?
-						2. Un processus éditorial ouvert
-						3. La revue dans le contexte de la science ouverte et de la diversité linguistique
-						4. De nouvelles perspectives
+						1. <em>Programming Historian</em>, l'émergence d'une revue
+						2. Qu'est-ce qu'une <em>leçon</em> ?
+						3. Un processus éditorial ouvert
+						4. <em>Programming Historian</em> : science ouverte et diversité linguistique
+						5. Enjeux et perspectives
+						6. Pourquoi et comment contribuer au <em>Programming Historian en français</em> ?
+
+						---
+						
+						1. Programming Historian, l'émergence d'une revue
 
 						---
 
-						<!-- .slide: data-background="#FFFFFF" -->
+						Au commencement était ...
 
-						1. Programming Historian, qu'est-ce que c'est ?
+						<img src="/images/digital-history-hacks.png" style="border:4px solid #3d7c81; border-radius:6px;" />
 
 						---
-
-						<!-- .slide: data-background="#FFFFFF" -->
+						
 						<p style="text-align: justify;">
 						<img src="images/ph-logo.png" width=10% height=5% style="vertical-align: middle;">
 						D'une initiative anglophone...
@@ -122,31 +196,25 @@
 						</p>
 
 						---
-
-						<!-- .slide: data-background="#FFFFFF" -->
-
+						
 						<p style="text-align: justify;">...à une revue quadrilingue<img src="images/ph-lang.png" width=40% height=10% style="vertical-align: middle;"></p>
 
-						<p style="text-align: justify;">
-						
-						</p>
 						<p>
 						<ul class="custom-list">
 							<li>2017 : publication de leçons traduites sous le titre de <em>Programming Historian en español</em>.</li>
-							<li>2019 : lancement du <em>Programming Historian en français en 2019.</em></li>
-							<li>2021 : lancement du <em>Programming Historian em português</em></li>
+							<li>2019 : lancement du <em>Programming Historian en français</em>.</li>
+							<li>2021 : lancement du <em>Programming Historian em português</em>.</li>
 							</ul>
 						</p>
 
-<!--  2016 : ajout d'une publication en langue espagnole à la publication initiale en langue anglaise 
-	2018, organisation d'un premier atelier d'écriture en espagnol et lancement d'un appel pour de nouvelles leçons en espagnol
-	La même année, nous avons ajouté une publication en français
-	2020 : une équipe lusophone s'est jointe
+						<!--  2016 : ajout d'une publication en langue espagnole à la publication initiale en langue anglaise 
+							2018, organisation d'un premier atelier d'écriture en espagnol et lancement d'un appel pour de nouvelles leçons en espagnol
+							La même année, nous avons ajouté une publication en français
+							2020 : une équipe lusophone s'est jointe
 
--->
+						-->
+
 						---
-
-						<!-- .slide: data-background="#FFFFFF" -->
 
 						<p style="text-align: justify;">
 						<a href="https://programminghistorian.org/en" target="_blank">
@@ -177,7 +245,83 @@
 
 						---
 
-						<!-- .slide: data-background="#FFFFFF" -->
+						<p style="text-align: center;">2. Qu'est-ce qu'une <em>leçon</em> ?</p>						
+
+						<!--Ici le but était de montrer que les leçons de PH sont plus que des tutoriels (qui ne sont pas peer-reviewed et pas actualisés au fil du temps), des tutoriels “augmentés” ; l’idée que PH donne ses lettres de noblesse aux tutoriels.
+
+						Donc le fait que les auteurs s’adressent directement aux lecteur·ices ; 
+
+						-->
+										
+						---
+
+						<!-- .slide: data-background="#FFFFFF" data-transition="none" -->
+
+						<img src="images/capture_ecran_lecon_1.png" style="border:4px solid #3d7c81; border-radius:6px;" />
+
+						<p style="text-align: center;">Entête d'une leçon</p>
+
+						---
+						<!-- .slide: data-transition="none"  -->
+
+
+						<img src="images/capture_ecran_lecon_2.png" style="border:4px solid #3d7c81; border-radius:6px;" />
+						
+						<p style="text-align: center;">3 niveaux de difficulté (facile, moyen, avancé)</p>
+					
+						---
+
+						<!-- .slide: data-transition="none"  -->
+
+						<img src="images/capture_ecran_lecon_3.png" style="border:4px solid #3d7c81; border-radius:6px;" />
+
+						<p style="text-align: center;">Mention des personnes contributrices</p>
+
+						---
+
+						<!-- .slide: data-transition="none"  -->
+
+						<img src="images/capture_ecran_lecon_4.png" style="border:4px solid #3d7c81; border-radius:6px;" />
+
+						<p style="text-align: center;">DOI pour des enjeux de pérennité</p>
+
+						<!--
+						DOI. Idée : giving legitimacy to lessons, higher profile, academic format
+
+						-->
+						
+						---
+					
+						<p style="text-align: center;">Des <u>leçons</u> plus que des tutoriels</p>
+
+						- cas d'usage et problématique concrète dans le contexte de la recherche
+						- jeux de données authentiques
+						- réflexions méthodologiques
+						- solutions alternatives
+						- bibliographie
+
+						---
+						
+						<img src="images/capture_ecran_filtres_lecons.png" style="border:4px solid #3d7c81; border-radius:6px;" />
+
+						<!--
+						le fait qu’on publie au fil de l’eau, que nos leçons (comme des tutoriels) sont classées par thèmes. 
+
+						-->
+
+						---
+						
+						<p style="text-align: center;">3. Un processus éditorial ouvert</p>
+
+						<!--
+						je montre qu’en cliquant ici on peut accéder au ticket GitHub. 
+
+						montrer depuis leçon publiée
+
+						-->
+
+						---
+				
 						Comment ça fonctionne ?
 
 						Git, GitHub et Jekyll
@@ -191,73 +335,64 @@
 
 						---
 
-						<!-- .slide: data-background="#FFFFFF" -->
-						### Qu'est-ce qu'une leçon Programming Historian ?
+						<!-- .slide: data-transition="none"  -->
 
-						De la proposition d’un tutoriel à sa publication
+						<img src="images/capture_ecran_lecon_5.png" style="border:4px solid #3d7c81; border-radius:6px;" />
 
-						<!--Ici le but était de montrer que les leçons de PH sont plus que des tutoriels (qui ne sont pas peer-reviewed et pas actualisés au fil du temps), des tutoriels “augmentés” ; l’idée que PH donne ses lettres de noblesse aux tutoriels.
-
-						Donc le fait que les auteurs s’adressent directement aux lecteur·ices ; 
-
-
-
-						-->
+						<p style="text-align: center;">Accès au ticket GitHub d'une leçon <img src="images/github.png" height="40" style="vertical-align: middle;"></p>
 
 						---
 
-						<!-- .slide: data-background="#FFFFFF" -->
+						<!-- .slide: data-transition="none"  -->
 
-						<!--
-						niveau de difficulté
-
-						et le fait qu’on publie au fil de l’eau, que nos leçons (comme des tutoriels) sont classées par thèmes. 
-
-						Ici je mets l’accent sur ce qui sépare les leçons de PH des simples tutoriels : peer-review
-
-						DOI. Idée : giving legitimacy to lessons, higher profile, academic format
-						-->
+						<img src="images/capture_ecran_ticket_github_1.png" style="border:4px solid #3d7c81; border-radius:6px;" />
 
 						---
 
-						<!-- .slide: data-background="#FFFFFF" -->
-						## “Lessons”: more than tutorials!
+						<!-- .slide: data-transition="none"  -->
 
-						<!--
-						use case(s), concrete problem in the context of research
-						authentic datasets
-						methodological reflexions
-						alternative solutions
-						bibliography
-						etc. 
-
-						open peer review
-
-						-->
+						<img src="images/capture_ecran_ticket_github_2.png" style="border:4px solid #3d7c81; border-radius:6px;" />
 
 						---
 
-						<!-- .slide: data-background="#FFFFFF" -->
-						## open peer review
+						<!-- .slide: data-transition="none"  -->
 
-						<!--
-						je montre qu’en cliquant ici on peut accéder au ticket GitHub. 
-
-						montrer depuis leçon publiée
-
-						-->
+						<img src="images/capture_ecran_ticket_github_3.png" style="border:4px solid #3d7c81; border-radius:6px;" />
 
 						---
 
-						<!-- .slide: data-background="#FFFFFF" -->
-						## A 3-step process:
-						- Initial Edit by editor
-						- Peer review by external reviewers
-						- Sustainability and accessibility checks
+						<!-- .slide: data-transition="none"  -->
 
-						---
+						<img src="images/capture_ecran_ticket_github_4.png" style="border:4px solid #3d7c81; border-radius:6px;" />
 
-						<!-- .slide: data-background="#FFFFFF" -->
+						---						
+
+						<p style="text-align: center;">Processus éditorial accessible sur GitHub <a href="https://github.com/programminghistorian/ph-submissions"><img src="images/github.png" height="40" style="vertical-align: middle;"></a></p>
+
+						<div class="table-container">
+						<table>
+						<thead>
+							<tr>
+							<th>N° étape</th>
+							<th>Intitulé</th>
+							<th>Responsable</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr><td>0</td><td><span class="nom-etape nom0">Proposition</span></td><td>Rédacteur·ice en chef</td></tr>
+							<tr><td>1</td><td><span class="nom-etape nom1">Soumission</span></td><td>Équipe de publication</td></tr>
+							<tr><td>2</td><td><span class="nom-etape nom2">Édition initiale</span></td><td>Rédacteur·ice</td></tr>
+							<tr><td>3</td><td><span class="nom-etape nom3">Révision 1</span></td><td>Auteur·ice & éditeur·ice</td></tr>
+							<tr><td>4</td><td><span class="nom-etape nom4">Examen par pairs</span></td><td>Relecteur·ices & éditeur·ice</td></tr>
+							<tr><td>5</td><td><span class="nom-etape nom5">Révision 2</span></td><td>Auteur·ice & éditeur·ice</td></tr>
+							<tr><td>6</td><td><span class="nom-etape nom6">Durabilité + accessibilité</span></td><td>Équipe de publication</td></tr>
+							<tr><td>7</td><td><span class="nom-etape nom7">Publication</span></td><td>Rédacteur·ice en chef</td></tr>
+						</tbody>
+						</table>
+
+						</div>
+
+						---						
 
 						Perma.cc is a web archiving service for legal and academic citations founded by the Harvard Library Innovation Lab in 2013
 
@@ -269,17 +404,18 @@
 
 						---
 
-						<!-- .slide: data-background="#FFFFFF" -->
+						<p style="text-align: center;">4. <em>Programming Historian</em> dans le contexte la science ouverte et de la diversité linguistique</p>				
+		
+						---
+						
 						Maintenance d'une leçon (ticket)
 
 						---
-
-						<!-- .slide: data-background="#FFFFFF" -->
+						
 						feedback du lectorat possible
 
 						---
-
-						<!-- .slide: data-background="#FFFFFF" -->
+						
 						Reproducibility challenges
 						La question des leçons qui vieillissent mal, ici à cause d’un site web qui a changé. (downloading web pages with python)
 
@@ -287,7 +423,6 @@
 
 						---
 
-						<!-- .slide: data-background="#FFFFFF" -->
 						Notre politique de “mise à la retraite” des leçons. 
 						There are two main reasons a lesson gets retired:
 						The tool / library / software is not longer available, is no longer maintained
@@ -296,25 +431,40 @@
 						for ex, the Python library libZotero, which is no longer maintained, and which now returns several errors when used. 
 
 						---
-
-						<!-- .slide: data-background="#FFFFFF" -->
+						
 						Lessons in 4 languages
 						Translations are peer-reviewed
 						CC-BY licence: can be translated into other languages
 
 						---
-
-						<!-- .slide: data-background="#FFFFFF" -->
+						
 						mettre l’accent sur l’utilisation de PH dans les cours, les workshops, le fait que ça permet d’avoir un “package” tout prêt, avec études de cas concrètes et sur données authentiques, réflexions sur la méthodologie, code, conseils, etc. 
 
 						---
+						
+						<p style="text-align: center;">5. Enjeux et perspectives</p>
 
-						<!-- .slide: data-background="#FFFFFF" -->
-						relecture en cours auteur bibliothécaire québécois
+						---
+					
+						Représenter des communautés de pratique 
+						- Par sélection (une leçon doit aider à répondre à un problème scientifique pertinent)
+						- Par prospection (toujours tâcher de représenter les pratiques et les connaissances les plus récentes)
+
+
+						Mettre l’accent sur la “communauté” : le fait que la leçon visibilise les personnes qui ont bossé dessus (et que c’était donc cool de contribuer à PH  :)
+
+						---
+						
+						- Intégrer les pays du Sud (- Amérique Latine qui est très active) et l’Asie
+						- Gérer le problème ( ?) de l’anglais comme langue technique – entre besoin d’un langage standard et les difficultés didactiques qui en découlent
+						- Connecter les langues ?
 
 						---
 
-						<!-- .slide: data-background="#FFFFFF" -->
+						6. Pourquoi et comment contribuer au <em>Programming Historian en français</em> ?
+
+						---
+						
 						Pourquoi contribuer à PH ?
 
 						Contribute to collaborative, sustainable, open scholarship
@@ -325,7 +475,6 @@
 
 						---
 
-						<!-- .slide: data-background="#FFFFFF" -->
 						Comment contribuer 
 
 						Les contributions peuvent prendre différentes formes :
@@ -335,84 +484,32 @@
 						- faire des retours, des suggestions, rapporter des problèmes
 						- fournir un soutien institutionnel (liste des partenaires institutionnels)
 
-						---
-
-						<!-- .slide: data-background="#FFFFFF" -->
-						Enjeux et perspectives
-
-						Représenter des communautés de pratique 
-						- Par sélection (une leçon doit aider à répondre à un problème scientifique pertinent)
-						- Par prospection (toujours tâcher de représenter les pratiques et les connaissances les plus récentes)
-
-
-						Mettre l’accent sur la “communauté” : le fait que la leçon visibilise les personnes qui ont bossé dessus (et que c’était donc cool de contribuer à PH  :)
-
-						---
-
-						<!-- .slide: data-background="#FFFFFF" -->
-						- Intégrer les pays du Sud (- Amérique Latine qui est très active) et l’Asie
-						- Gérer le problème ( ?) de l’anglais comme langue technique – entre besoin d’un langage standard et les difficultés didactiques qui en découlent
-						- Connecter les langues ?
-
-						---
-
-						<!-- .slide: data-background="#FFFFFF" -->
-
-						Merci !
-						Thank you!
-						¡Gracias!
-						Obrigado!
-
-						[🔁 retour au début de la présentation](#/0)
-
-
 					</textarea>
 				</section>
-				<section>
-					<h2>Ce que l'on a mis en place</h2>
-					<div style="float:left;width:50%;margin-left:-150px">
-						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/250px-Octicons-mark-github.png.png" alt="dataesr github" style="width:120%" >
-					</div>
-					<div style="float:right;display:block;width:60%;padding-left:-250px;font-size:0.8em;">
-						<ul>
-							<li>Chaque <span style='font-weight:900'>repo correspond à un module</span> (le plus générique possible), pas à un projet</li>
-							<li>Une <span style='font-weight:900'>organisation github</span> : <a href='https://github.com/dataesr'>https://github.com/dataesr</a> avec :</li>
-							<ul>
-							  <li>32 repos publics, 10 contributeurs</li>
-							  <li>Mécanisme de validation avec <span style='font-weight:900'>pull request</span> (PR) quand nécessaire</li>
-							  <li>Github actions pour aider au <span style='font-weight:900'>développement continu</span> (CI/CD)</li>
-							  <li>Utilisation des <span style='font-weight:900'>issues</span> pour suivre publiquement les bugs et les évolutions</li>
-							</ul>
-						</ul>
-					</div>
+
+				<section data-background-gradient="linear-gradient(#3d7c81, #FFFFFF)">
+
+						<div style="position: relative; width: 100%; height: 300px;">
+
+						<span class="ph-bg ph-bg-en" style="position: absolute; top: 20px; left: 10%;">Thank you!</span>
+						
+						<span class="ph-bg ph-bg-es" style="position: absolute; top: 40px; right: 15%;">¡Gracias!</span>
+						
+						<span class="ph-bg ph-bg-fr" style="position: absolute; bottom: 70px; left: 25%;">Merci !</span>
+						
+						<span class="ph-bg ph-bg-pt" style="position: absolute; bottom: 30px; right: 25%;">Obrigado!</span>
+
+						</div>
 				</section>
 
-				<section>
-					<h2>Les bénéfices que nous en retirons</h2>
-					  <ul style='font-size:0.8em'>
-						<li>Utilisation de Github et ses outils ...</li>
-						<ul>
-							<li><span style='font-weight:900'>Travailler ensemble</span> sur un même projet</li>
-							<li>Fluidifier les <span style='font-weight:900'>passations des compétences</span></li>
-						  <li><span style='font-weight:900'>Documentation</span> et mémoire commune</li>
-						</ul>
-						<li>... avec des repo publics</li>
-						<ul>
-							<li>Incitation à produire du <span style='font-weight:900'>code modulaire, lisible et sécurisé</span></li>
-							<li><span style='font-weight:900'>Visibilité et reconnaissance</span> du travail effectué</li>
-						</ul>
-						<li>Et aussi ré-utilisation de code source ouverts par d'autres !</li>
-					</ul>
-				</section>
-				</section>
 				<section data-background="images/illustration-ph.jpg">
-					<div style='color: rgb(255, 255, 255);background: rgba(150, 0, 0, 0.4);'>
-					  <div>
-											<ul>
-												<li>Pour télécharger le support en PDF : <a href="https://alexandrewa.github.io/LibreABC-PH-2025?print-pdf">alexandrewa.github.io/LibreABC-PH-2025?print-pdf</a> et <strong>imprimer la page en PDF</strong></li>
-												<li>Lien vers le dépôt GitHub <a href="https://github.com/AlexandreWa/LibreABC-PH-2025">LibreABC-PH-2025</a></li>
-											</ul>
+					<div style="color: rgb(255, 255, 255); background: #222 ;">
+						<p>➡️ Pour télécharger le support en PDF : <a href="https://alexandrewa.github.io/LibreABC-PH-2025?print-pdf">alexandrewa.github.io/LibreABC-PH-2025?print-pdf</a> et <strong>imprimer la page en PDF</strong> (ou ctrl + P)</li></p>
+						<p>➡️ Lien vers le dépôt GitHub <a href="https://github.com/AlexandreWa/LibreABC-PH-2025">LibreABC-PH-2025</a></p>
+						<p style="text-align: center; margin-top: 200px; font-size:0.6em;margin-top:0;margin-bottom:0.5rem;">
+						<a href="#/0">🔁 retour au début de la présentation</a>
 					</div>
+					
 				</section>
 
 			</div>
@@ -427,8 +524,6 @@
 		<script src="plugin/highlight/highlight.js"></script>
 		<script>
 
-			// Also available as an ES module, see:
-			// https://revealjs.com/initialization/
 			Reveal.initialize({
 				controls: true,
 				progress: true,
@@ -436,7 +531,6 @@
 				hash: true,
 				slideNumber: 'c/t',
 
-				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
 			});
 			Reveal.configure({ pdfMaxPagesPerSlide: 1 })
